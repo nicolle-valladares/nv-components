@@ -1,5 +1,5 @@
 {
-  "name": "@nicolle-valladares/salary-components",
+  "name": "@nicolle-valladares/ra-components",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@nicolle-valladares"
   },
@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nicolle-valladares/salary-components.git"
+    "url": "git+https://github.com/nicolle-valladares/ra-components.git"
   },
   "author": "Nicolle Valladares",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nicolle-valladares/salary-components/issues"
+    "url": "https://github.com/nicolle-valladares/ra-components/issues"
   },
-  "homepage": "https://github.com/nicolle-valladares/salary-components#readme",
+  "homepage": "https://github.com/nicolle-valladares/ra-components#readme",
   "devDependencies": {
     "@babel/core": "^7.18.13",
     "@babel/preset-env": "^7.18.10",
