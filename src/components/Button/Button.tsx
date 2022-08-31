@@ -23,8 +23,6 @@ export interface ButtonProps {
   type?: 'default' | 'primary' | 'ghost' | 'dashed' | 'link' | 'text'
   /** Disabled state of button */
   disabled?: boolean
-  /** Disabled state of button */
-  danger?: boolean
   /** Class for the button element */
   className?: string
   /** The custom color */
