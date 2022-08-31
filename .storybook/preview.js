@@ -11,7 +11,7 @@ export const parameters = {
   },
   options: {
     storySort: {
-      order: ['Red Abierta', ['Introduction', 'Colors', 'Typography']]
+      order: ['Red Abierta', 'Theme', 'Components']
     }
   },
   layout: 'centered'

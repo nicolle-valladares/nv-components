@@ -15,10 +15,16 @@ export interface ButtonProps {
   style?: React.CSSProperties
   /** Set the original html type of button */
   htmlType?: 'button' | 'submit' | 'reset'
+  /** Set the icon component of button */
+  icon?: React.ReactElement
+  /** Icon's placement */
+  placement?: string
   /** This is the types Antd supports (primary | ghost  | dashed | link | text | default) types */
   type?: 'default' | 'primary' | 'ghost' | 'dashed' | 'link' | 'text'
   /** Disabled state of button */
   disabled?: boolean
+  /** Disabled state of button */
+  danger?: boolean
   /** Class for the button element */
   className?: string
   /** The custom color */
@@ -128,6 +134,7 @@ const CustomColorDefaultStyles = css<ExtendedButtonProps>`
     `}
 `
 
+// TODO: Change antd wave shadow color
 const PrimaryStyles = css<ExtendedButtonProps>`
   &.ant-btn-primary {
     border: none;
@@ -178,6 +185,108 @@ const CustomColorPrimaryStyles = css<ExtendedButtonProps>`
     `}
 `
 
+const TextStyles = css<ExtendedButtonProps>`
+  &.ant-btn-text {
+    background: transparent;
+    border: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: ${props => props.theme.colors.aTint05};
+      color: ${props => props.theme.colors.primaryColor};
+    }
+
+    &[disabled] {
+      background: ${props => props.theme.colors.aTint20};
+      color: ${props => props.theme.colors.bgWhite};
+
+      &:hover,
+      &:focus,
+      &:active {
+        background: ${props => props.theme.colors.aTint20};
+        color: ${props => props.theme.colors.bgWhite};
+      }
+    }
+  }
+`
+
+const CustomColorTextStyles = css<ExtendedButtonProps>`
+  ${props =>
+    props.color &&
+    css`
+      color: ${props.color};
+
+      &.ant-btn-text:hover,
+      &.ant-btn-text:focus,
+      &.ant-btn-text:active {
+        background: ${props => props.theme.colors.bgWhite};
+      }
+
+      &.ant-btn-text[disabled],
+      &.ant-btn-text[disabled]:hover {
+        background: ${props => props.theme.colors.bgWhite};
+      }
+    `}
+`
+
+const LinkStyles = css<ExtendedButtonProps>`
+  &.ant-btn-link {
+    padding: 0;
+    height: auto;
+    border: none;
+    width: auto;
+    min-width: 0;
+    text-transform: none;
+    font-weight: normal;
+    background: none;
+  }
+`
+
+const CustomColorLinkStyles = css<ExtendedButtonProps>`
+  &.ant-btn-link {
+    color: ${props => (props.color ? props.color : props.theme.colors.aColor)};
+    &:hover,
+    &:active,
+    &:focus {
+      color: ${props =>
+        props.color ? props.color : props.theme.colors.btnHover02};
+    }
+  }
+
+  &.ant-btn-link[disabled],
+  &.ant-btn-link[disabled]:hover {
+    color: ${props => props.theme.colors.aTint30};
+  }
+`
+
+const IconOnlyStyles = css<ExtendedButtonProps>`
+  &.ant-btn-icon-only {
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > * {
+      font-size: 18px;
+    }
+
+    > .anticon {
+      line-height: 0;
+    }
+  }
+`
+
+const WithIconStyles = css<ExtendedButtonProps>`
+  &.ant-btn-link span {
+    display: flex;
+  }
+  &.ant-btn > .material-icons + span,
+  &.ant-btn > span + .material-icons {
+    margin-left: 8px;
+  }
+`
+/* ----------- SIZES ----------- */
 const LargeSizeStyles = css<ExtendedButtonProps>`
   height: 40px;
   min-width: ${props => (isCollapsed(props.collapsed) ? 'auto' : '96px')};
@@ -251,13 +360,21 @@ const SizeStyles = css<ExtendedButtonProps>`
 const StyledButton = styled(AntdButton)<ExtendedButtonProps>`
   ${DefaultStyles}
   ${PrimaryStyles}
+  ${TextStyles}
+  ${LinkStyles}
+  ${IconOnlyStyles}
   ${props => {
     switch (props.type) {
       case 'primary':
         return CustomColorPrimaryStyles
+      case 'text':
+        return CustomColorTextStyles
+      case 'link':
+        return CustomColorLinkStyles
       default:
         return CustomColorDefaultStyles
     }
   }}
   ${SizeStyles}
+  ${WithIconStyles}
 `

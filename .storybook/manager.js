@@ -9,3 +9,4 @@ addons.setConfig({
     brandImage: logo
   })
 })
+

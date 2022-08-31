@@ -1,6 +1,5 @@
 import React from 'react'
 import { Card as AntdCard } from 'antd'
-import './Card.css'
 
 export interface CardProps {
   title: string
