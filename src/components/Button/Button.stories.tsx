@@ -3,14 +3,14 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { Button } from './Button'
 
 export default {
-  title: 'Salary Components/Button',
+  title: 'Components/Button',
   component: Button
 } as ComponentMeta<typeof Button>
 
 const Template: ComponentStory<typeof Button> = args => <Button {...args} />
 
-export const PrimaryButton = Template.bind({})
-PrimaryButton.args = {
+export const RAButton = Template.bind({})
+RAButton.args = {
   children: 'Hello world!',
   type: 'primary'
 }

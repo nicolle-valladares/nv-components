@@ -2,9 +2,8 @@ import { hexToRgbA } from '../../../functions'
 
 const BRAND_COLORS = {
   primaryColor: '#F95C3A',
-  sucessColor: '#2BA679',
-  warningColor: '#F3C456',
-  dColor: '#664FB7'
+  secondaryColor: '#F6F6F6',
+  tertiaryColor: '#181818'
 }
 
 const BRAND_TINTS = {

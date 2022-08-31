@@ -1,0 +1,90 @@
+import { Canva, Meta, Story } from '@storybook/addon-docs/blocks'
+import { Button } from './Button'
+import { Space } from 'antd'
+import { Icon } from '../Icon'
+
+<Meta title='Components/Button/Introduction' />
+
+# Button
+
+`import { Button } from '@nicolle-valladares/ra-components';`
+
+## When To Use
+
+`Primary button:` indicate the main action, one primary button at most in one section.
+
+`Default button:` indicate a series of actions without priority.
+
+`Text button:` used for the most secondary action.
+
+`Link button:` used for external links.
+
+## Examples
+
+<Canvas>
+  <Story name='Introduction'>
+    <Space direction='vertical'>
+      <div>
+        <h2>Types</h2>
+        <Space size={20} direction='horizontal'>
+          <Button type='primary'>Primary Button</Button>
+          <Button type='default'>Default Button</Button>
+          <Button type='text'>Text Button</Button>
+          <Button type='link'>Link Button</Button>
+        </Space>
+      </div>
+      <div>
+        <h2>Sizes</h2>
+        <Space size={20} direction='horizontal'>
+          <Button size='small'>Small Button</Button>
+          <Button size='medium'>Medium Button</Button>
+          <Button size='large'>Large Button</Button>
+          <Button width='200'>Custom width</Button>
+        </Space>
+      </div>
+      <div>
+        <h2>Icons</h2>
+        <Space size={20} direction='horizontal'>
+          <Button>
+            <span>Button with icon</span>
+            <Icon>done</Icon>
+          </Button>
+          <Button shape='circle' icon={<Icon>fingerprint</Icon>} />
+          <Button type='primary' icon={<Icon>login</Icon>}>
+            Login
+          </Button>
+          <Button
+            type='primary'
+            shape='circle'
+            icon={<Icon>attach_money</Icon>}
+          />
+        </Space>
+      </div>
+      <div>
+        <h2>Shapes</h2>
+        <Space size={20} direction='horizontal'>
+          <Button>Normal Button</Button>
+          <Button shape='circle'>Ok</Button>
+          <Button shape='round'>Round Button</Button>
+        </Space>
+      </div>
+      <div>
+        <h2>Colors</h2>
+        <Space size={20} direction='horizontal'>
+          <Button type='primary' color='accentGreen01'>
+            Green
+          </Button>
+          <Button type='primary' color='accentOrange'>
+            Orange
+          </Button>
+          <Button type='primary' color='accentRed'>
+            Red
+          </Button>
+          <Button type='primary' color='accentYellow'>
+            Yellow
+          </Button>
+        </Space>
+      </div>
+    </Space>
+  </Story>
+</Canvas>

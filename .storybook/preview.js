@@ -11,9 +11,10 @@ export const parameters = {
   },
   options: {
     storySort: {
-      order: ['Salary', ['Introduction', 'Colors', 'Typography']]
+      order: ['Red Abierta', 'Theme', 'Components']
     }
-  }
+  },
+  layout: 'centered'
 }
 
 addDecorator((storyFn, context) => <MainWrapper>{storyFn()}</MainWrapper>)
