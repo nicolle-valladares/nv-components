@@ -17,8 +17,6 @@ export interface ButtonProps {
   htmlType?: 'button' | 'submit' | 'reset'
   /** Set the icon component of button */
   icon?: React.ReactElement
-  /** Icon's placement */
-  placement?: string
   /** This is the types Antd supports (primary | ghost  | dashed | link | text | default) types */
   type?: 'default' | 'primary' | 'ghost' | 'dashed' | 'link' | 'text'
   /** Disabled state of button */
