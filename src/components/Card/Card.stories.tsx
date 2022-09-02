@@ -2,7 +2,6 @@ import React from 'react'
 import { CardContent } from './CardContent'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { Card } from './Card'
-import { Typography } from '../Typography'
 
 export default {
   title: 'Components/Card',
