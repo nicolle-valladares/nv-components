@@ -1,0 +1,85 @@
+import { Canva, Meta, Story } from '@storybook/addon-docs/blocks'
+import { Card } from './Card'
+import { CardContent } from './CardContent'
+import { Space } from 'antd'
+import { Typography } from '../Typography/Typography'
+
+<Meta title='Components/Card/Introduction' />
+
+# Card
+
+`import { Card } from '@nicolle-valladares/ra-components';`
+
+## When To Use
+
+A `card` can be used to display content related to a single subject. The content can consist of multiple elements of varying types and sizes.
+
+## Examples
+
+<Canvas>
+  <Story name='Introduction'>
+    <Space direction='vertical'>
+      <div>
+        <h2>Basic Card</h2>
+        <Space size={20} direction='horizontal'>
+          <Card
+            extra={
+              <a>
+                <Typography variant='captionSemibold' color='primaryColor'>
+                  More
+                </Typography>
+              </a>
+            }
+            title={
+              <Typography variant='headingSubtitle' color='tertiaryColor'>
+                Default size card
+              </Typography>
+            }
+            style={{ width: 300 }}>
+            <CardContent>
+              <p style={{ margin: 0 }}>Card content</p>
+              <p style={{ margin: 0 }}>Card content</p>
+              <p style={{ margin: 0 }}>Card content</p>
+            </CardContent>
+          </Card>
+          <Card
+            title={
+              <Typography variant='headingSubtitle' color='primaryColor'>
+                Small size card
+              </Typography>
+            }
+            size='small'
+            style={{ width: 300 }}>
+            <CardContent>
+              <p style={{ margin: 0 }}>Card content</p>
+              <p style={{ margin: 0 }}>Card content</p>
+              <p style={{ margin: 0 }}>Card content</p>
+            </CardContent>
+          </Card>
+        </Space>
+        <div>
+          <h2>No Borders</h2>
+          <Space
+            size={20}
+            direction='horizontal'
+            style={{ backgroundColor: '#ececec', padding: '24px' }}>
+            <Card
+              title={
+                <Typography variant='headingSubtitle' color='bgBlack'>
+                  Card title
+                </Typography>
+              }
+              bordered={false}
+              style={{ width: 300 }}>
+              <CardContent>
+                <p style={{ margin: 0 }}>Card content</p>
+                <p style={{ margin: 0 }}>Card content</p>
+                <p style={{ margin: 0 }}>Card content</p>
+              </CardContent>
+            </Card>
+          </Space>
+        </div>
+      </div>
+    </Space>
+  </Story>
+</Canvas>
