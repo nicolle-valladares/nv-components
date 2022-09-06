@@ -1,0 +1,29 @@
+import { Canva, Meta, Story } from '@storybook/addon-docs/blocks'
+import { Checkbox } from './Checkbox'
+import { Space } from 'antd'
+
+<Meta title='Components/Checkbox/Introduction' />
+
+# Checkbox
+
+`import { Checkbox } from '@nicolle-valladares/ra-components';`
+
+## When To Use
+
+`Checkbox` indicate the state as changed and this needs to be submitted.
+
+## Examples
+
+<Canvas>
+  <Story name='Introduction'>
+    <Space direction='vertical'>
+      <div>
+        <h2>Types</h2>
+        <Space size={20} direction='horizontal'>
+          <Checkbox type='primary'>Checbox</Checkbox>
+          <Checkbox disabled type='primary'>Checbox disabled</Checkbox>
+        </Space>
+      </div>
+    </Space>
+  </Story>
+</Canvas>
