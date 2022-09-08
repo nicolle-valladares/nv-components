@@ -1,0 +1,34 @@
+import { Canva, Meta, Story } from '@storybook/addon-docs/blocks'
+import { DatePicker } from './DatePicker'
+import { Space } from 'antd'
+
+<Meta title='Components/DatePicker/Introduction' />
+
+# DatePicker
+
+`import { DatePicker } from '@nicolle-valladares/ra-components';`
+
+## When To Use
+
+A `DatePicker` can be used to select or input a date by clicking the input box, from a popup calendar.
+
+## Examples
+
+<Canvas>
+  <Story name='Introduction'>
+    <Space direction='vertical'>
+      <div>
+        <h2>Basic DatePicker</h2>
+        <DatePicker placeholder='Custom Placeholder' />
+      </div>
+      <div>
+        <h2>Disabled DatePicker</h2>
+        <DatePicker placeholder='Disabled' disabled />
+      </div>
+      <div>
+        <h2>Borderless DatePicker</h2>
+        <DatePicker bordered={false} placeholder='Borderless' />
+      </div>
+    </Space>
+  </Story>
+</Canvas>
