@@ -104,7 +104,7 @@ const ACCENTS_COLORS = {
 const TEXT_AND_BACKGROUND_COLORS = {
   bgBlack: '#000000',
   bgDarkGray: '#BABABA',
-  bgInputs: '#F3F6F9',
+  bgInputs: '#F6F6F6',
   bgLightBlue: '#FBFDFF',
   bgLightGray: '#F7F7F7',
   bgLightPurple: '#F5F6FC',
