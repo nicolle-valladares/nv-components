@@ -1,0 +1,166 @@
+import { Canva, Meta, Story } from '@storybook/addon-docs/blocks'
+import { Button } from '../Button'
+import { Dropdown } from './Dropdown'
+import { Icon } from '../Icon'
+import { Menu, MenuItem } from '../Menu'
+import { Space } from 'antd'
+
+<Meta title='Components/Dropdown/Introduction' />
+
+# Dropdown
+
+`import { Dropdown } from '@nicolle-valladares/ra-components';`
+
+## When To Use
+
+A `Dropdown` can be used to select or input a date by clicking the input box, from a popup calendar.
+
+## Examples
+
+<Canvas>
+  <Story name='Introduction'>
+    <Space direction='vertical'>
+      <div>
+        <h2>Basics</h2>
+        <Space size={20} direction='horizontal'>
+          <Dropdown
+            overlay={
+              <Menu>
+                <MenuItem>Option 1</MenuItem>
+                <Menu.Divider />
+                <MenuItem>Option 2</MenuItem>
+                <MenuItem>Option 3</MenuItem>
+                <MenuItem>Option 4</MenuItem>
+              </Menu>
+            }>
+            <Button type='primary'>click me</Button>
+          </Dropdown>
+          <Dropdown
+            overlay={
+              <Menu>
+                <MenuItem>Option 1</MenuItem>
+                <Menu.Divider />
+                <MenuItem>Option 2</MenuItem>
+                <MenuItem>Option 3</MenuItem>
+                <MenuItem>Option 4</MenuItem>
+              </Menu>
+            }
+            trigger={Dropdown.TRIGGER.HOVER}>
+            <Button type='primary'>hover me</Button>
+          </Dropdown>
+        </Space>
+      </div>
+      <div>
+        <h2>Arrow</h2>
+        <Space size={20} direction='horizontal'>
+          <Dropdown
+            overlay={
+              <Menu>
+                <MenuItem>Option 1</MenuItem>
+                <Menu.Divider />
+                <MenuItem>Option 2</MenuItem>
+                <MenuItem>Option 3</MenuItem>
+                <MenuItem>Option 4</MenuItem>
+              </Menu>
+            }
+            placement={Dropdown.PLACEMENT.BOTTOM_LEFT}
+            trigger={Dropdown.TRIGGER.HOVER}
+            arrow>
+            <Button>bottom left</Button>
+          </Dropdown>
+          <Dropdown
+            overlay={
+              <Menu>
+                <MenuItem>Option 1</MenuItem>
+                <Menu.Divider />
+                <MenuItem>Option 2</MenuItem>
+                <MenuItem>Option 3</MenuItem>
+                <MenuItem>Option 4</MenuItem>
+              </Menu>
+            }
+            placement={Dropdown.PLACEMENT.BOTTOM_CENTER}
+            trigger={Dropdown.TRIGGER.HOVER}
+            arrow>
+            <Button>bottom center</Button>
+          </Dropdown>
+          <Dropdown
+            overlay={
+              <Menu>
+                <MenuItem>Option 1</MenuItem>
+                <Menu.Divider />
+                <MenuItem>Option 2</MenuItem>
+                <MenuItem>Option 3</MenuItem>
+                <MenuItem>Option 4</MenuItem>
+              </Menu>
+            }
+            placement={Dropdown.PLACEMENT.BOTTOM_RIGHT}
+            trigger={Dropdown.TRIGGER.HOVER}
+            arrow>
+            <Button>bottom right</Button>
+          </Dropdown>
+          <Dropdown
+            overlay={
+              <Menu>
+                <MenuItem>Option 1</MenuItem>
+                <Menu.Divider />
+                <MenuItem>Option 2</MenuItem>
+                <MenuItem>Option 3</MenuItem>
+                <MenuItem>Option 4</MenuItem>
+              </Menu>
+            }
+            placement={Dropdown.PLACEMENT.TOP_LEFT}
+            trigger={Dropdown.TRIGGER.HOVER}
+            arrow>
+            <Button>top left</Button>
+          </Dropdown>
+          <Dropdown
+            overlay={
+              <Menu>
+                <MenuItem>Option 1</MenuItem>
+                <Menu.Divider />
+                <MenuItem>Option 2</MenuItem>
+                <MenuItem>Option 3</MenuItem>
+                <MenuItem>Option 4</MenuItem>
+              </Menu>
+            }
+            placement={Dropdown.PLACEMENT.TOP_CENTER}
+            trigger={Dropdown.TRIGGER.HOVER}
+            arrow>
+            <Button>top center</Button>
+          </Dropdown>
+          <Dropdown
+            overlay={
+              <Menu>
+                <MenuItem>Option 1</MenuItem>
+                <Menu.Divider />
+                <MenuItem>Option 2</MenuItem>
+                <MenuItem>Option 3</MenuItem>
+                <MenuItem>Option 4</MenuItem>
+              </Menu>
+            }
+            placement={Dropdown.PLACEMENT.TOP_RIGHT}
+            trigger={Dropdown.TRIGGER.HOVER}
+            arrow>
+            <Button>top right</Button>
+          </Dropdown>
+        </Space>
+      </div>
+      <div>
+        <h2>Icons</h2>
+        <Space size={20} direction='horizontal'>
+          <Dropdown
+            overlay={
+              <Menu>
+                <MenuItem icon={<Icon>home</Icon>}>Option 1</MenuItem>
+                <MenuItem icon={<Icon>thumb_up</Icon>}>Option 2</MenuItem>
+                <MenuItem icon={<Icon>work</Icon>}>Option 3</MenuItem>
+                <MenuItem icon={<Icon>view_list</Icon>}>Option 4</MenuItem>
+              </Menu>
+            }>
+            <Button type='primary'>click me icons</Button>
+          </Dropdown>
+        </Space>
+      </div>
+    </Space>
+  </Story>
+</Canvas>
