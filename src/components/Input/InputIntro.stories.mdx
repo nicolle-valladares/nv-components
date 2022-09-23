@@ -1,0 +1,63 @@
+import { useRef } from 'react'
+import { Canva, Meta, Story } from '@storybook/addon-docs/blocks'
+import { Button, Icon, Input, Space } from '../index.ts'
+
+<Meta title='Components/Input/Introduction' />
+
+# Input
+
+`import { Input } from '@nicolle-valladares/ra-components';`
+
+A basic widget for getting the user `input` is a text field. Keyboard and mouse can be used for providing or changing data.
+
+## When To Use
+
+A user `input` in a form field is needed.
+
+A search `input` is required.
+
+## Examples
+
+<Canvas>
+  <Story name='Introduction'>
+    <Space direction='vertical'>
+      <div>
+        <h2>Basics</h2>
+        <Space direction='vertical'>
+          <Input placeholder='Basic usage' />
+          <Input placeholder='With label' label='Input Label' />
+          <Input placeholder='Disabled' disabled />
+          <Input placeholder='50 Characters max' maxLength={50} />
+        </Space>
+      </div>
+      <div>
+        <h2>Borderless</h2>
+        <Space direction='vertical'>
+          <Input placeholder='Borderless' bordered={false} />
+        </Space>
+      </div>
+      <div>
+        <h2>Prefix and Suffix</h2>
+        <Space direction='vertical'>
+          <Input
+            placeholder='Enter your username'
+            prefix={<Icon>person</Icon>}
+          />
+          <Input prefix='L.' suffix='LPS' />
+          <Input prefix='L.' suffix='LPS' disabled />
+        </Space>
+      </div>
+      <div>
+        <h2>Search and Password Inputs</h2>
+        <Space direction='vertical'>
+          <Input.Search
+            placeholder='input search text'
+            onSearch={value => console.log(value)}
+            width={400}
+          />
+          <Input.Password placeholder='input password' width={400} />
+        </Space>
+      </div>
+    </Space>
+  </Story>
+</Canvas>
