@@ -6,7 +6,9 @@
   "version": "1.0.5",
   "description": "Custom components library",
   "dependencies": {
+    "@types/lodash-es": "^4.17.6",
     "antd": "4.6.3",
+    "lodash-es": "^4.17.21",
     "styled-components": "^5.3.5",
     "uuid": "^8.3.2"
   },
