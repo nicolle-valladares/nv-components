@@ -1,7 +1,6 @@
 import React from 'react'
 import { Button as AntdButton } from 'antd'
 import { useTheme } from '../../hooks'
-
 import styled, { css } from 'styled-components'
 
 const isCollapsed = (collapsed?: string | boolean) => collapsed === 'true'

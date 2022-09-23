@@ -1,0 +1,16 @@
+import React from 'react'
+import { Menu as AntdMenu } from 'antd'
+import styled from 'styled-components'
+
+export const MenuItem = (props: any) => <StyledMenuItem {...props} />
+
+const StyledMenuItem = styled(AntdMenu.Item)`
+  color: ${props => props.theme.colors.primaryColor};
+  /* spread typography variant css rules */
+  ${props => props.theme.typography.paragraphRegular}
+
+  &.ant-menu-item-disabled {
+    /** It's set as important because Antd also marks this as important */
+    color: ${props => props.theme.colors.aTint30} !important;
+  }
+`

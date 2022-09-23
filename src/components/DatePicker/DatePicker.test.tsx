@@ -1,14 +1,15 @@
 import React from 'react'
-import { Card } from './Card'
-import { render } from '@testing-library/react'
+
+import { DatePicker } from './DatePicker'
 import { salaryTheme } from '../../styles/themes'
 import { ThemeProvider } from 'styled-components'
+import { render } from '@testing-library/react'
 
-describe('Card', () => {
-  test('renders the Card component', () => {
+describe('DatePicker', () => {
+  test('renders the DatePicker component', () => {
     render(
       <ThemeProvider theme={salaryTheme}>
-        <Card children='Hello world!' />
+        <DatePicker bgColor='white' />
       </ThemeProvider>
     )
   })

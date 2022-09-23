@@ -1,9 +1,9 @@
 import React from 'react'
 
 import { Button } from './Button'
+import { render } from '@testing-library/react'
 import { salaryTheme } from '../../styles/themes'
 import { ThemeProvider } from 'styled-components'
-import { render } from '@testing-library/react'
 
 describe('Button', () => {
   test('renders the Button component', () => {

@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-import { datePicker } from './globalStyles'
+import { datePicker, dropdownStyles } from './globalStyles'
 
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -40,4 +40,5 @@ export const GlobalStyle = createGlobalStyle`
   ======================================== */
   
   ${datePicker}
+  ${dropdownStyles}
 `
