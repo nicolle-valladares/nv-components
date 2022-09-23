@@ -11,5 +11,5 @@ const Template: ComponentStory<typeof Checkbox> = args => <Checkbox {...args} />
 
 export const RACheckbox = Template.bind({})
 RACheckbox.args = {
-  children: 'Hello world!',
+  children: 'Hello world!'
 }
