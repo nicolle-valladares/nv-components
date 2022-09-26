@@ -1,0 +1,45 @@
+import { Canva, Meta, Story } from '@storybook/addon-docs/blocks'
+import { Button, Empty, Space } from '../index.ts'
+import { Empty as AntdEmpty } from 'antd'
+
+<Meta title='Components/Empty/Introduction' />
+
+# Empty
+
+`import { Empty } from '@nicolle-valladares/ra-components';`
+
+## When To Use
+
+When there is no data provided.
+
+## Examples
+
+<Canvas>
+  <Story name='Introduction'>
+    <Space direction='vertical'>
+      <div>
+        <h2>Basics</h2>
+        <Space size={20} direction='horizontal'>
+          <Empty description={'No data.'} />
+          <Empty
+            image={AntdEmpty.PRESENTED_IMAGE_DEFAULT}
+            description={false}
+          />
+        </Space>
+      </div>
+      <div>
+        <h2>Custom Data</h2>
+        <Space size={20} direction='horizontal'>
+          <Empty
+            image='https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg'
+            imageStyle={{
+              height: 60
+            }}
+            description={'No data.'}>
+            <Button type='primary'>Create Now</Button>
+          </Empty>
+        </Space>
+      </div>
+    </Space>
+  </Story>
+</Canvas>

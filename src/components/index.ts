@@ -3,6 +3,7 @@ export { Card, CardContent } from './Card'
 export { Checkbox } from './Checkbox'
 export { DatePicker } from './DatePicker'
 export { Dropdown } from './Dropdown'
+export { Empty } from "./Empty"
 export { Icon } from './Icon'
 export { Input } from './Input'
 export { Menu, MenuItem } from './Menu'
