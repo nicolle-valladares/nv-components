@@ -9,7 +9,7 @@ const StyledMenu = styled(AntdMenu)`
   border: none;
   &:hover {
     & > div {
-      color: ${props => props.theme.colors.aColor};
+      color: ${props => props.theme.colors.primaryColor};
     }
   }
 
@@ -23,5 +23,16 @@ const StyledMenu = styled(AntdMenu)`
         background: ${props => props.theme.colors.bgWhite};
       }
     }
+  }
+
+  .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: ${props => props.theme.colors.aTint20};
+  }
+
+  .ant-menu-vertical .ant-menu-item::after,
+  .ant-menu-vertical-left .ant-menu-item::after,
+  .ant-menu-vertical-right .ant-menu-item::after,
+  .ant-menu-inline .ant-menu-item::after {
+    border-right: 3px solid ${props => props.theme.colors.primaryColor};
   }
 `

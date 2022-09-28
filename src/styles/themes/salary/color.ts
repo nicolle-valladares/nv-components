@@ -9,7 +9,7 @@ const BRAND_COLORS = {
 const BRAND_TINTS = {
   aTint05: '#f5f4f6',
   aTint10: '#ebe9ee',
-  aTint20: '#d8d3dc',
+  aTint20: '#f95c3a47',
   aTint30: '#c4becb',
   aTint40: '#b1a8ba',
   aTint50: '#9d92a9',
