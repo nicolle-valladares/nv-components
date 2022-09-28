@@ -6,7 +6,7 @@ export { Dropdown } from './Dropdown'
 export { Empty } from "./Empty"
 export { Icon } from './Icon'
 export { Input } from './Input'
-export { Menu, MenuItem } from './Menu'
+export { Menu, MenuItem, SubMenu } from './Menu'
 export { Steps } from './Steps'
 export { Space } from './Space/Space'
 export { Typography } from './Typography'
