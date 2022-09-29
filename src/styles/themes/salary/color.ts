@@ -121,7 +121,8 @@ const MENUS_AND_HOVER_STATES_COLORS = {
   btnHover01: '#F13910',
   btnHover02: '#F4532E',
   menuHover: '#D94625',
-  menuItem: '#947B95'
+  menuItem: '#F27121',
+  menuItemBall: '#FFEE1F'
 }
 
 const TINTS_COLORS = {

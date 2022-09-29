@@ -1,0 +1,30 @@
+import { Canva, Meta, Story } from '@storybook/addon-docs/blocks'
+import { Logo, Space } from '../index.ts'
+
+<Meta title='Components/Logo/Introduction' />
+
+# Logo
+
+`import { Logo } from '@nicolle-valladares/ra-components';`
+
+
+## Examples
+
+<Canvas>
+  <Story name='Introduction'>
+    <Space direction='vertical'>
+      <div>
+        <h2>Basic Logo</h2>
+        <Space size={20} direction='horizontal'>
+          <Logo height='40' width='40' variant={'short'} />
+        </Space>
+      </div>
+      <div>
+        <h2>Full Logo</h2>
+        <Space size={20} direction='horizontal'>
+          <Logo height='80' width='190' variant={'full'} />
+        </Space>
+      </div>
+    </Space>
+  </Story>
+</Canvas>
