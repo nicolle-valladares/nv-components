@@ -7,7 +7,7 @@ export const MenuItem = (props: any) => <StyledMenuItem {...props} />
 const StyledMenuItem = styled(AntdMenu.Item)`
   color: ${props => props.theme.colors.tertiaryColor};
   :hover {
-    color: ${props => props.theme.colors.primaryColor};
+    color: ${props => props.theme.colors.aTint20};
   }
   :after {
     background-color: ${props => props.theme.colors.aTint30} !important;
