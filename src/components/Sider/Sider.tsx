@@ -7,7 +7,11 @@ interface LayoutProps {
   type?: 'light' | 'dark'
 }
 
-export const Sider = ({ sideContent, mainContent, type }: LayoutProps) => (
+export const Sider = ({
+  sideContent,
+  mainContent,
+  type = 'light'
+}: LayoutProps) => (
   <Layout>
     <LeftContent type={type}>{sideContent}</LeftContent>
     <MainContent>{mainContent}</MainContent>
