@@ -1,6 +1,8 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 import { Space as AntdSpace } from 'antd'
 import styled from 'styled-components'
+
+import { SpaceProps as AntdSpaceProps} from 'antd/lib/space'
 
 enum ALIGN {
   START = 'start',
@@ -21,13 +23,14 @@ enum SIZE {
   LARGE = 'large'
 }
 
-export interface SpaceProps {
+export interface SpaceProps extends AntdSpaceProps {
   /**	Align items*/
-  align: ALIGN.START | ALIGN.END | ALIGN.CENTER | ALIGN.BASELINE
+  align?: ALIGN.START | ALIGN.END | ALIGN.CENTER | ALIGN.BASELINE
   /**	The space direction */
-  direction: DIRECTION.HORIZONTAL | DIRECTION.VERTICAL
+  direction?: DIRECTION.HORIZONTAL | DIRECTION.VERTICAL
   /** The space size */
-  size: SIZE.DEFAULT | SIZE.SMALL | SIZE.MIDDLE | SIZE.LARGE
+  size?: SIZE.DEFAULT | SIZE.SMALL | SIZE.MIDDLE | SIZE.LARGE
+  children?: React.ReactNode
 }
 
 const DEFAULT_SIZE = 8
