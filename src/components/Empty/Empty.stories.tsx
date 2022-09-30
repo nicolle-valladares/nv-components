@@ -12,6 +12,5 @@ const Template: ComponentStory<typeof Empty> = args => <Empty {...args} />
 
 export const RAEmpty = Template.bind({})
 RAEmpty.args = {
-  description: 'No data provided.',
-  children: <Button>Create Now</Button>
+  description: 'No data provided.'
 }

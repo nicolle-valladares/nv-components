@@ -3,17 +3,22 @@ import { isFunction } from 'lodash-es'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import { Button } from '../Button/Button'
-import { Icon } from '../Icon/Icon'
-import { Space } from '../Space/Space'
+import { Button, Icon, Space } from '../index'
 import { Typography } from '../Typography/Typography'
+
+export interface ContentCardProps {
+  audit: Object
+  cardData: any
+  className?: string
+  toggleCalendlyModal?: any
+}
 
 export const ContentCard = ({
   audit = {},
-  cardData = {},
+  cardData,
   className = undefined,
   toggleCalendlyModal = undefined
-}) => {
+}: ContentCardProps) => {
   const {
     content,
     rounded = false,
@@ -38,7 +43,7 @@ export const ContentCard = ({
 
   return (
     <ContentContainer data-testid='content-container' className={className}>
-      <SubtitleContainer data-testid='subtitle-container' size={10}>
+      {/* <SubtitleContainer data-testid='subtitle-container' size={8}>
         <Icon
           className='card-icon'
           color='brandColorTint15'
@@ -49,17 +54,17 @@ export const ContentCard = ({
         <Typography variant='headingTitle' color='primaryColor'>
           {subtitle}
         </Typography>
-      </SubtitleContainer>
+      </SubtitleContainer> */}
       <StyledContent variant='paragraphRegular' color='textSecondary'>
         {renderContent()}
         {!!buttons?.length && (
           <ButtonWrapper>
             {buttons.length &&
-              buttons.map(btn => (
+              buttons.map((btn: any) => (
                 <Button
                   key={btn.key}
                   type='primary'
-                  onClick={() => btn.onClick({ ...audit })}
+                  onClick={(e: React.MouseEvent) => btn.onClick({ ...audit })}
                   style={{ height: 24 }}>
                   <Typography variant='smallButtonText' color='bgWhite'>
                     {btn.label}
@@ -79,14 +84,14 @@ const ContentContainer = styled.div`
   padding: 32px 25px 32px 25px;
 `
 
-const SubtitleContainer = styled(Space)`
-  margin-bottom: 16px;
-  align-items: center;
-  > div:first-child {
-    display: flex;
-    align-items: center;
-  }
-`
+// const SubtitleContainer = styled(Space)`
+//   margin-bottom: 16px;
+//   align-items: center;
+//   > div:first-child {
+//     display: flex;
+//     align-items: center;
+//   }
+// `
 
 const StyledContent = styled(Typography)`
   margin-left: 36px;

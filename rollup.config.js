@@ -1,9 +1,8 @@
-import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
-import typescript from '@rollup/plugin-typescript'
+import resolve from '@rollup/plugin-node-resolve'
 import copy from 'rollup-plugin-copy'
 import del from 'rollup-plugin-delete'
-import dts from 'rollup-plugin-dts'
+import typescript from '@rollup/plugin-typescript'
 
 import pkg from './package.json'
 
@@ -43,12 +42,6 @@ const config = [
       })
     ],
     external: Object.keys(pkg.peerDependencies || {})
-  },
-  {
-    input: 'dist/esm/index.d.ts',
-    output: [{ file: 'dist/index.d.ts', format: 'esm' }],
-    plugins: [dts()],
-    external: [/\.css$/]
   }
 ]
 
