@@ -42,21 +42,25 @@ interface ExtendedButtonProps extends Omit<ButtonProps, 'size'> {
 }
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({
-    size = 'large',
-    collapsed = false,
-    type = 'default',
-    htmlType = 'button',
-    color = '',
-    width = '',
-    spaceBetween = false,
-    ...props
-  }) => {
+  (
+    {
+      size = 'large',
+      collapsed = false,
+      type = 'default',
+      htmlType = 'button',
+      color = '',
+      width = '',
+      spaceBetween = false,
+      ...props
+    },
+    ref
+  ) => {
     const { colors } = useTheme()
     const buttonColor = color ? colors[color] : undefined
 
     return (
       <StyledButton
+        ref={ref}
         htmlType={htmlType}
         size={size}
         type={type}
