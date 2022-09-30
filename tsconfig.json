@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "target": "es5",
+    "target": "es2017",
     "module": "ESNext",
-    "jsx": "react",
+    "rootDir": "src",
+    "jsx": "react-jsx",
     "declaration": true,
     "outDir": "./dist",
     "isolatedModules": true,
@@ -22,4 +23,3 @@
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
 }
-

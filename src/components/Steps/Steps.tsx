@@ -13,11 +13,13 @@ export type StepProps = AntdStepProps & {
 }
 
 export interface StepsProps extends AntdStepsProps {
+  /** @deprecated We'no longer use classnames */
+  className?: string
   steps: StepProps[]
   /** Defaults to 'secondary' to maintain backwards compatibility */
   variant?: 'primary' | 'secondary'
-  type?: 'navigation' | 'default'
-  children?: React.ReactNode
+  /** @deprecated we'll provide a cleaner way of interacting with styles in a future release */
+  width?: string | number
 }
 
 const { Step } = AntdSteps

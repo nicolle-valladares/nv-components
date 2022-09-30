@@ -1,6 +1,5 @@
 import { Canva, Meta, Story } from '@storybook/addon-docs/blocks'
-import { Checkbox } from '../index.ts'
-import {Space} from "antd"
+import { Checkbox, Space } from '../index.ts'
 
 <Meta title='Components/Checkbox/Introduction' />
 
@@ -20,8 +19,8 @@ import {Space} from "antd"
       <div>
         <h2>Types</h2>
         <Space size={20} direction='horizontal'>
-          <Checkbox>Checkbox</Checkbox>
-          <Checkbox>
+          <Checkbox type='primary'>Checkbox</Checkbox>
+          <Checkbox disabled type='primary'>
             Checkbox disabled
           </Checkbox>
         </Space>

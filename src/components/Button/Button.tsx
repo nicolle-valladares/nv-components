@@ -3,15 +3,13 @@ import { Button as AntdButton } from 'antd'
 import { useTheme } from '../../hooks'
 import styled, { css } from 'styled-components'
 
-import { ButtonProps as AntdButtonProps } from 'antd/lib/button'
-
 const isCollapsed = (collapsed?: string | boolean) => collapsed === 'true'
 
-export interface ButtonProps extends AntdButtonProps {
+export interface ButtonProps {
   /** Children node for the button */
   children?: React.ReactNode
   /** Sets size of the button */
-  size?: 'small' | 'middle' | 'large'
+  size?: 'small' | 'medium' | 'large'
   /** CSS styles */
   style?: React.CSSProperties
   /** Set the original html type of button */
@@ -54,11 +52,12 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   }) => {
     const { colors } = useTheme()
     const buttonColor = color ? colors[color] : undefined
+    const buttonSize = size === 'medium' ? 'middle' : size
 
     return (
       <StyledButton
         htmlType={htmlType}
-        size={size}
+        size={buttonSize}
         type={type}
         color={buttonColor}
         $spaceBetween={spaceBetween}
