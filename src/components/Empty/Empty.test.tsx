@@ -10,7 +10,7 @@ describe('Empty', () => {
     render(
       <ThemeProvider theme={salaryTheme}>
         <Empty
-          image='https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg'
+          url='https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg'
           description='No data.'
         />
       </ThemeProvider>
