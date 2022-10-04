@@ -1,0 +1,338 @@
+import { Canva, Meta, Story } from '@storybook/addon-docs/blocks'
+import { Select, Space, Typography } from '../index.ts'
+import { Option } from './Option'
+
+<Meta title='Components/Select/Introduction' />
+
+# Select
+
+`import { Select } from '@nicolle-valladares/ra-components';`
+
+## Examples
+
+<Canvas>
+  <Story name='Introduction'>
+    <Space direction='vertical'>
+      <div>
+        <h2>Basic Select</h2>
+        <Space size={20} direction='horizontal'>
+          <Select
+            placeholder='Select an option'
+            label='Input Label'
+            autoWidth
+            allowClear>
+            <Option value={1}>Option One</Option>
+            <Option value={2}>Option Two</Option>
+            <Option value={3}>Option Three</Option>
+            <Option value={4}>Option Four</Option>
+            <Option value={5}>Option Five</Option>
+            <Option value={6}>Option Six</Option>
+            <Option value={7}>Option Seven</Option>
+            <Option value={8}>Option Eight</Option>
+            <Option value={9}>Option Nine</Option>
+            <Option value={10}>Option Ten</Option>
+            <Option value={11}>Option Eleven</Option>
+            <Option value={12}>Option Twelve</Option>
+          </Select>
+          <Select label='No Placeholder'>
+            <Option value='00-1134175'>Ahmad</Option>
+            <Option value='02-7835738'>Martainn</Option>
+            <Option value='10-4170415'>Sher</Option>
+            <Option value='56-6881920'>Denice</Option>
+            <Option value='78-5458717'>Cornelia</Option>
+          </Select>
+          <Select placeholder='No Label' autoWidth>
+            <Option value='1'>Red</Option>
+            <Option value='2'>Blue</Option>
+            <Option value='3'>Yellow</Option>
+          </Select>
+          <Select label='Collapsed' placeholder='OP' collapsed>
+            <Option value={1}>One</Option>
+            <Option value={2}>Two</Option>
+            <Option value={3}>Three</Option>
+            <Option value={4}>Four</Option>
+            <Option value={5}>Five</Option>
+          </Select>
+          <Select label='No border' placeholder='Borderless' bordered={false}>
+            <Option value='1'>Red</Option>
+            <Option value='2'>Blue</Option>
+            <Option value='3'>Yellow</Option>
+          </Select>
+        </Space>
+      </div>
+      <div>
+        <h2>Custom Width</h2>
+        <Space size={20} direction='horizontal'>
+          <Select
+            placeholder='Fixed Width'
+            label='International Airports'
+            width='180px'>
+            <Option value='LAX'>Los Angeles International Airport</Option>
+            <Option value='FRA'>Frankfurt Airport</Option>
+            <Option value='PEK'>Beijing Capital International Airport</Option>
+          </Select>
+          <Select placeholder='Automatic Width' label='International Airports'>
+            <Option value='LAX'>Los Angeles International Airport</Option>
+            <Option value='FRA'>Frankfurt Airport</Option>
+            <Option value='PEK'>Beijing Capital International Airport</Option>
+          </Select>
+        </Space>
+      </div>
+      <div>
+        <h2>Basic Example with Search</h2>
+        <Space size={20} direction='horizontal'>
+          <Select
+            showSearch
+            placeholder='Auto Width'
+            label='Input Label'
+            autoWidth
+            allowClear
+            allowSearch>
+            <Option value={1}>Option One</Option>
+            <Option value={2}>Option Two</Option>
+            <Option value={3}>Option Three</Option>
+            <Option value={4}>Option Four</Option>
+            <Option value={5}>Option Five</Option>
+            <Option value={6}>Option Six</Option>
+            <Option value={7}>Option Seven</Option>
+            <Option value={8}>Option Eight</Option>
+            <Option value={9}>Option Nine</Option>
+            <Option value={10}>Option Ten</Option>
+            <Option value={11}>Option Eleven</Option>
+            <Option value={12}>Option Twelve</Option>
+          </Select>
+        </Space>
+      </div>
+      <div>
+        <h2>Disabled Option</h2>
+        <Space size={20} direction='horizontal'>
+          <Select placeholder='Select' label='Input Label'>
+            <Option value={1}>Apple</Option>
+            <Option value={2}>Orange</Option>
+            <Option value={3} disabled>
+              Banana
+            </Option>
+          </Select>
+        </Space>
+      </div>
+      <div>
+        <h2>Disabled</h2>
+        <Space size={20} direction='horizontal'>
+          <Select
+            placeholder='Auto Width'
+            label='Input Label'
+            autoWidth
+            disabled>
+            <Option value='1'>Red</Option>
+            <Option value='2'>Blue</Option>
+            <Option value='3'>Yellow</Option>
+          </Select>
+          <Select
+            label='Animal Scientific Names'
+            autoWidth
+            disabled
+            defaultValue={7}>
+            <Option value={1}>Kobus vardonii vardoni</Option>
+            <Option value={2}>Oxybelis sp.</Option>
+            <Option value={3}>Heloderma horridum</Option>
+            <Option value={4}>Ctenophorus ornatus</Option>
+            <Option value={5}>Snycerus caffer</Option>
+            <Option value={6}>Phasianus colchicus</Option>
+            <Option value={7}>Otocyon megalotis</Option>
+            <Option value={8}>Plegadis falcinellus</Option>
+            <Option value={9}>Felis chaus</Option>
+            <Option value={10}>Pelecanus occidentalis</Option>
+          </Select>
+          <Select
+            placeholder='Select one or more options'
+            label='Max Tag Count Example'
+            allowClear
+            mode='multiple'
+            autoWidth
+            maxTagCount={3}
+            disabled
+            value={[1, 2, 3, 4]}
+            showArrow>
+            <Option value={1}>Option One</Option>
+            <Option value={2}>Option Two</Option>
+            <Option value={3}>Option Three</Option>
+            <Option value={4}>Option Four</Option>
+            <Option value={5}>Option Five</Option>
+            <Option value={6}>Option Six</Option>
+            <Option value={7}>Option Seven</Option>
+            <Option value={8}>Option Eight</Option>
+            <Option value={9}>Option Nine</Option>
+            <Option value={10}>Option Ten</Option>
+            <Option value={11}>Option Eleven</Option>
+            <Option value={12}>Option Twelve</Option>
+          </Select>
+        </Space>
+      </div>
+      <div>
+        <h2>Multiple Select Options</h2>
+        <Space size={20} direction='horizontal'>
+          <Select
+            placeholder='Select one or more colors - NO Arrow Example'
+            label='Favorite Rainbow Colors'
+            autoWidth
+            allowClear
+            mode='multiple'>
+            <Option value={1}>Red</Option>
+            <Option value={2}>orange</Option>
+            <Option value={3}>yellow</Option>
+            <Option value={4}>green</Option>
+            <Option value={5} disabled>
+              blue
+            </Option>
+            <Option value={6}>indigo</Option>
+            <Option value={7}>violet</Option>
+          </Select>
+          <Select
+            placeholder='Select one or more options'
+            label='Controlled width'
+            allowClear
+            width='350px'
+            mode='multiple'
+            showArrow>
+            <Option value={1}>A</Option>
+            <Option value={2}>AAA</Option>
+            <Option value={3}>AAAA</Option>
+            <Option value={4}>AAAAA</Option>
+            <Option value={5}>AAAAAA</Option>
+            <Option value={6}>AAAAAAA</Option>
+            <Option value={7}>AAAAAAAA</Option>
+          </Select>
+          <Select
+            placeholder='Select one or more options'
+            label='Max Tag Count Example'
+            allowClear
+            mode='multiple'
+            autoWidth
+            maxTagCount={3}
+            showArrow>
+            <Option value={1}>Option One</Option>
+            <Option value={2}>Option Two</Option>
+            <Option value={3}>Option Three</Option>
+            <Option value={4}>Option Four</Option>
+            <Option value={5}>Option Five</Option>
+            <Option value={6}>Option Six</Option>
+            <Option value={7}>Option Seven</Option>
+            <Option value={8}>Option Eight</Option>
+            <Option value={9}>Option Nine</Option>
+            <Option value={10}>Option Ten</Option>
+            <Option value={11}>Option Eleven</Option>
+            <Option value={12}>Option Twelve</Option>
+          </Select>
+        </Space>
+      </div>
+      <div>
+        <h2>Multiple Select With Select</h2>
+        <Space size={20} direction='horizontal'>
+          <Select
+            placeholder='Select one or more colors - Search options'
+            label='Favorite Rainbow Colors'
+            autoWidth
+            allowClear
+            allowSearch
+            mode='multiple'>
+            <Option value={1}>Red</Option>
+            <Option value={2}>orange</Option>
+            <Option value={3}>yellow</Option>
+            <Option value={4}>green</Option>
+            <Option value={5} disabled>
+              blue
+            </Option>
+            <Option value={6}>indigo</Option>
+            <Option value={7}>violet</Option>
+          </Select>
+        </Space>
+      </div>
+      <div>
+        <h2>Scrollable Content</h2>
+        <Space size={20} direction='vertical'>
+          <Select
+            width='300px'
+            placeholder='Select'
+            label='Countries'
+            dropdownAlign={{
+              offset: [0, 0]
+            }}
+            getPopupContainer={e => e}>
+            <Option value='peru'>Peru</Option>
+            <Option value='indonesia'>Indonesia</Option>
+            <Option value='south'>South Africa</Option>
+            <Option value='portugal'>Portugal</Option>
+            <Option value='egypt'>Egypt</Option>
+            <Option value='france'>France</Option>
+            <Option value='russia'>Russia</Option>
+            <Option value='argentina'>Argentina</Option>
+            <Option value='spain'>Spain</Option>
+            <Option value='japan'>Japan</Option>
+            <Option value='costa_rica'>Costa Rica</Option>
+            <Option value='philippines'>Philippines</Option>
+            <Option value='estonia'>Estonia</Option>
+            <Option value='peru'>Peru</Option>
+            <Option value='united_states'>United States</Option>
+            <Option value='azerbaijan'>Azerbaijan</Option>
+          </Select>
+          <Typography>
+            Assertively synergize optimal content rather than leading-edge
+            platforms. Uniquely negotiate user friendly results and holistic
+            outsourcing. Objectively benchmark customer directed total linkage
+            after cost effective paradigms. Seamlessly optimize stand-alone
+            e-tailers through global paradigms. Dramatically negotiate
+            professional partnerships and client-focused mindshare. Objectively
+            deliver bricks-and-clicks niche markets whereas cooperative
+            platforms. Assertively develop pandemic infomediaries via robust
+            content. Seamlessly extend backend infomediaries with user friendly
+            methods of empowerment. Energistically grow leading-edge
+            potentialities after an expanded array of infrastructures.
+            Authoritatively network turnkey potentialities without resource
+            maximizing niches. Dynamically productivate intuitive products via
+            unique total linkage. Dramatically empower distinctive communities
+            via collaborative niche markets. Intrinsicly provide access to
+            backward-compatible deliverables with open-source portals.
+            Compellingly procrastinate long-term high-impact networks via
+            user-centric e-business. Seamlessly procrastinate user-centric
+            e-markets vis-a-vis impactful potentialities. Distinctively
+            synthesize empowered scenarios without backward-compatible
+            deliverables. Distinctively maximize functional supply chains after
+            installed base web services. Phosfluorescently create exceptional
+            manufactured products without professional convergence. Rapidiously
+            impact process-centric markets after turnkey growth strategies.
+            Efficiently streamline mission-critical deliverables vis-a-vis B2B
+            web-readiness. Professionally optimize dynamic catalysts for change
+            before multidisciplinary strategic theme areas. Compellingly
+            fabricate alternative interfaces via accurate interfaces. Holisticly
+            reintermediate best-of-breed systems and just in time sources.
+            Proactively create emerging applications via bricks-and-clicks
+            schemas. Appropriately mesh customized testing procedures after
+            multifunctional manufactured products. Uniquely provide access to
+            value-added partnerships and visionary innovation. Monotonectally
+            impact just in time bandwidth with multidisciplinary process
+            improvements. Quickly exploit multifunctional sources through
+            virtual experiences. Conveniently coordinate cross-media best
+            practices without bleeding-edge "outside the box" thinking.
+            Synergistically conceptualize an expanded array of applications with
+            team driven methodologies. Collaboratively communicate innovative
+            initiatives with empowered experiences. Energistically synthesize
+            diverse collaboration and idea-sharing for future-proof manufactured
+            products. Uniquely reinvent robust mindshare before parallel
+            e-services. Authoritatively generate future-proof human capital
+            without premier scenarios. Credibly target visionary networks for
+            high-quality core competencies. Collaboratively facilitate adaptive
+            experiences whereas efficient catalysts for change. Holisticly
+            synergize collaborative methodologies through goal-oriented
+            solutions. Uniquely administrate resource sucking architectures
+            rather than technically sound benefits. Progressively orchestrate
+            technically sound content without mission-critical e-markets.
+            Globally network distributed relationships vis-a-vis business
+            interfaces. Synergistically re-engineer cross-unit materials
+            vis-a-vis fully tested schemas. Efficiently deploy user-centric
+            action items.
+          </Typography>
+        </Space>
+      </div>
+    </Space>
+  </Story>
+</Canvas>
